@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Dhi-Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      
+      <span class="logo_name">Dhi- Expense Tracker</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="index.html" class="active">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <!-- Wrap the Income link with an <a> tag -->
+        <a href="income.html">
+          <i class="bx bx-box"></i>
+          <span class="links_name">Income</span>
+        </a>
+      </li>
+      <li>
+        <a href="Expense.html">
+          <i class="bx bx-list-ul"></i>
+          <span class="links_name">Expenses</span>
+        </a>
+      </li>
+      <li>
+        <a href="Transcation.html">
+          <i class="bx bx-pie-chart-alt-2"></i>
+          <span class="links_name">Transactions History</span>
+        </a>
+      </li>
+      <li>
+        <a href="Calculation.html">
+          <i class="bx bx-coin-stack"></i>
+          <span class="links_name">Total Calculations</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="setting.html">
+          <i class="bx bx-cog"></i>
+          <span class="links_name">Import and Export</span>
+        </a>
+      </li>
+      <li class="log_out">
+        <a href="#" id="logout-link">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Log out</span>
+        </a>
+    </li>
+    
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button" >
+        <i class="bx bx-menu sidebarBtn"></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <i class="bx bx-search"></i>
+      </div>
+      <div class="profile-details">
+        <img src="images/profile.jpg" alt="" />
+        <span class="admin_name">Dhivya</span>
+        <i class="bx bx-chevron-down"></i>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Income</div>
+            <div class="indicator">
+              <i class="bx bx-up-arrow-alt"></i>
+            </div>
+            <div id="total-income" class="value"></div> <!-- Display total income here -->
+          </div>
+          <i class="bx bx-cart-alt cart"></i>
+        </div>
+
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Expenses</div>
+            <div class="indicator">
+              <i class="bx bx-up-arrow-alt"></i>
+            </div>
+            <div id="total-expenses" class="value"></div> <!-- Display total expenses here -->
+          </div>
+          <i class="bx bxs-cart-add cart two"></i>
+        </div>
+
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Net Income</div>
+            <div class="indicator">
+              <i class="bx bx-up-arrow-alt"></i>
+            </div>
+            <div id="net-income" class="value"></div> <!-- Display net income here -->
+          </div>
+          <i class="bx bx-cart cart three"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Balance</div>
+            <div class="indicator">
+              <i class="bx bx-down-arrow-alt down"></i>
+            </div>
+            <div id="balance" class="value"></div> <!-- Display net income here -->
+          </div>
+          <i class="bx bxs-cart-download cart four"></i>
+        </div>
+      </div>
+      <div class="expenses-chart">
+        <canvas id="expensesChart"></canvas>
+      </div>
+    </div>
+  </section>
+  <script src="js/total-calculations.js"></script>
+<script src="js/index.js"></script>
+
+  <script src="js/pie.js"></script>
+  <script src="js/logout.js"></script>
+ 
+
+</body>
+
+</html>

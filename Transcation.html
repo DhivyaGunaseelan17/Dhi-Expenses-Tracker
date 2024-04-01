@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Dhi-Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+     
+      <span class="logo_name">Dhi- Expense Tracker</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="index.html" class="active">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="income.html">
+          <i class="bx bx-box"></i>
+          <span class="links_name">Income</span>
+        </a>
+      </li>
+      <li>
+        <a href="expense.html">
+          <i class="bx bx-list-ul"></i>
+          <span class="links_name">Expenses</span>
+        </a>
+      </li>
+      <li>
+        <a href="Transactions.html">
+          <i class="bx bx-pie-chart-alt-2"></i>
+          <span class="links_name">Transactions</span>
+        </a>
+      </li>
+      <li>
+        <a href="Calculation.html">
+          <i class="bx bx-coin-stack"></i>
+          <span class="links_name">Total Calculations</span>
+        </a>
+      </li>
+      <li>
+        <a href="setting.html">
+          <i class="bx bx-cog"></i>
+          <span class="links_name">Import and Export</span>
+        </a>
+      </li>
+      <li class="log_out">
+        <a href="#" id="logout-link">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Log out</span>
+        </a>
+    </li>
+    
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class="bx bx-menu sidebarBtn"></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <i class="bx bx-search"></i>
+      </div>
+      <div class="profile-details">
+        <img src="images/profile.jpg" alt="" />
+        <span class="admin_name">Dhivya</span>
+        <i class="bx bx-chevron-down"></i>
+      </div>
+    </nav>
+   <div class="home-content">
+    <div class="transaction-section">
+      <div class="transaction-list income-list">
+        <h2>Income List</h2>
+        <label for="income-category-filter">Filter by Category:</label>
+        <select id="income-category-filter">
+          <option value="all">All Categories</option>
+          <option value="Salary">Salary</option>
+          <option value="Freelance">Freelance</option>
+          <option value="Investment">Investment</option>
+        </select>
+        <table id="income-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount (₹)</th>
+              <th>Action</th> 
+              
+            </tr>
+          </thead>
+          <tbody id="income-body">
+            <!-- Income items will be added dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="transaction-section">
+      <div class="transaction-list expense-list">
+        <h2>Expense List</h2>
+        <label for="expense-category-filter">Filter by Category:</label>
+        <select id="expense-category-filter">
+          <option value="all">All Categories</option>
+          <option value="Food">Food</option>
+          <option value="Transportation">Transportation</option>
+          <option value="Housing">Housing</option>
+          <option value="Entertainment">Entertainment</option>
+        <option value="Utilities">Utilities</option>
+        <option value="Others">Others</option>
+        </select>
+        <table id="expense-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount (₹)</th>
+              <th>Action</th> 
+            </tr>
+          </thead>
+          <tbody id="expense-body">
+            <!-- Expense items will be added dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <script src="js/transcations.js"></script>
+  <script src="js/logout.js"></script>
+
+
+ 
+</body>
+
+</html>
